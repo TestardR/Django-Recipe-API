@@ -2,6 +2,7 @@ from django.test import TestCase, Client
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 
+
 class AdminSiteTests(TestCase):
 
     def setUp(self):
@@ -17,7 +18,6 @@ class AdminSiteTests(TestCase):
             name='Test User Full Name',
         )
 
-    
     def test_users_listed(self):
         """Test that users are listed on the user page"""
         url = reverse('admin:core_user_changelist')
